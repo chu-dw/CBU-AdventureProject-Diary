@@ -1,28 +1,28 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<!--<?xml version="1.0" encoding="UTF-8" ?>-->
 
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTO Mapper 3.0//EN"
-        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTO Mapper 3.0//EN"-->
+<!--        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">-->
 
-<mapper namespace="diary_project.backend.board.mapper.BoardMapper">
+<!--<mapper namespace="diary_project.backend.board.mapper.BoardMapper">-->
 
-    <insert id="postBoard">
-        INSERT board (title, maintext, date) VALUES (#{title}, #{maintext}, #{date})
-    </insert>
+<!--    <insert id="postBoard">-->
+<!--        INSERT board (title, maintext, date) VALUES (#{title}, #{maintext}, #{date})-->
+<!--    </insert>-->
 
-    <select id="postBoard" resultType="List">
-        <![CDATA[
-            SELECT
-                board_idx,
-                title,
-                hit_cnt,
-                created_datetime
-            FROM
-                t_board
-            WHERE
-                deleted_yn = 'N'
-            ORDER BY board_idx DESC
-        ]]>
-    </select>
+<!--    <select id="postBoard" resultType="List">-->
+<!--        <![CDATA[-->
+<!--            SELECT-->
+<!--                board_idx,-->
+<!--                title,-->
+<!--                hit_cnt,-->
+<!--                created_datetime-->
+<!--            FROM-->
+<!--                t_board-->
+<!--            WHERE-->
+<!--                deleted_yn = 'N'-->
+<!--            ORDER BY board_idx DESC-->
+<!--        ]]>-->
+<!--    </select>-->
 
-</mapper>
+<!--</mapper>-->
 
