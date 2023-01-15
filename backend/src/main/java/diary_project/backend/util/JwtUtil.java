@@ -10,7 +10,7 @@ import java.util.Map;
 @Slf4j
 @UtilityClass
 public class JwtUtil {
-    private String salt = "CHANGJUN";
+    private String salt = "dw";
 
     private Long expireMin = Long.valueOf(2);
 
