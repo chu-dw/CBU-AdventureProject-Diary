@@ -1,11 +1,14 @@
 package diary_project.backend.board.controller;
 
+import diary_project.backend.board.dto.BoardRequest;
+import diary_project.backend.board.entity.Board;
 import diary_project.backend.board.repository.BoardRepository;
 import diary_project.backend.board.service.BoardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,13 +26,8 @@ public class BoardContoller {
     @Autowired
     private BoardRepository boardRepository;
 
-    @RequestMapping(value = "postBoard", method = RequestMethod.POST)
-    public ResponseEntity<?> postBoard() {
-        BoardDto boardDto = new BoardDto();
-        boardDto.setTitle("test1");
-        boardDto.setMaintext("what do i do");
-        boardDto.setDate("1104");
-
-        return new ResponseEntity<>(boardDto, HttpStatus.OK);
+    @PostMapping("board/new")
+    public Board create(@RequestMapping BoardRequest request){
+        return BoardRepository.save(request.getBoard())
     }
 }

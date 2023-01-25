@@ -3,6 +3,7 @@ package diary_project.backend.user.service;
 import diary_project.backend.user.entity.User;
 import diary_project.backend.user.repository.UserRepository;
 import diary_project.backend.util.JwtUtil;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
